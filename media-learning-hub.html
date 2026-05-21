@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Media Learning Hub</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+        .bg-container {
+            background-color: #32364d;
+            text-align: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .heading-bg {
+            background-color: #424559;
+            color: #f2edee;
+            padding: 10px;
+            border-radius: 10px;
+            margin: 10px;
+            font-family: "Roboto";
+        }
+
+        .card-container {
+            background-color: #ebf0f0;
+            border-radius: 10px;
+            margin: 40px;
+            border: solid 3px #f05459;
+            padding: 20px;
+        }
+
+        .h-line {
+            border: solid 2px red;
+            margin: 20px;
+        }
+
+        .yt-video {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .yt-card {
+            background-color: white;
+            text-align: left;
+            margin: 20px;
+            padding: 15px;
+            border-radius: 10px;
+            border: solid #3798b0 2px;
+            width: 320px;
+        }
+
+        .yt-head {
+            color: #f05459;
+            font-family: "Roboto";
+        }
+
+        .yt-style {
+            width: 100%;
+            height: 200px;
+            border-radius: 10px;
+            border: none;
+        }
+
+        .btn-style {
+            color: white;
+            background-color: #D16BA5;
+            border: none;
+            border-radius: 30px;
+            padding: 13px 30px;
+            margin: 20px 5px;
+        }
+
+        .boxes {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .box-style {
+            background-color: #604d8c;
+            width: 30vw;
+            min-width: 250px;
+            border-radius: 15px;
+            color: white;
+            text-align: left;
+            padding: 35px 25px;
+            margin: 15px;
+        }
+
+        .h-line-box {
+            border: solid 2px white;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="bg-container">
+
+        <div class="heading-bg">
+            <h1>🎬 Media Learning Hub</h1>
+            <p>Explore Videos & Interactive Content</p>
+        </div>
+
+        <div class="card-container">
+            <h1>📺 Featured YouTube Videos</h1>
+            <hr class="h-line">
+
+            <div class="yt-video">
+
+                <div class="yt-card">
+                    <h3 class="yt-head">HTML Tutorial</h3>
+
+                    <iframe class="yt-style"
+                        src="https://www.youtube.com/embed/qz0aGYrrlhU"
+                        allowfullscreen>
+                    </iframe>
+
+                    <p>Learn HTML basics with this comprehensive tutorial</p>
+                </div>
+
+                <div class="yt-card">
+                    <h3 class="yt-head">CSS Flexbox Guide</h3>
+
+                    <iframe class="yt-style"
+                        src="https://www.youtube.com/embed/K74l26pE4YA"
+                        allowfullscreen>
+                    </iframe>
+
+                    <p>Master CSS Flexbox layout system</p>
+                </div>
+
+            </div>
+
+            <button class="btn-style">👍 Like this page</button>
+            <button class="btn-style">🎨 Change Color</button>
+            <button class="btn-style">🔄 Reset</button>
+
+        </div>
+
+        <div class="boxes">
+
+            <div class="box-style">
+                <h3>📦 Box Model</h3>
+                <hr class="h-line-box">
+
+                <p>This box demonstrates:</p>
+
+                <ul>
+                    <li>Padding: 35px 25px</li>
+                    <li>Margin: 15px</li>
+                    <li>Border: 3px</li>
+                    <li>Border-radius: 15px</li>
+                </ul>
+            </div>
+
+            <div class="box-style">
+                <h3>🎨 Background Properties</h3>
+                <hr class="h-line-box">
+
+                <p>Background features used:</p>
+
+                <ul>
+                    <li>Linear gradients</li>
+                    <li>Radial gradients</li>
+                    <li>Background colors</li>
+                    <li>RGBA transparency</li>
+                </ul>
+            </div>
+
+            <div class="box-style">
+                <h3>📐 Flexbox Layout</h3>
+                <hr class="h-line-box">
+
+                <p>Flexbox properties applied:</p>
+
+                <ul>
+                    <li>display: flex</li>
+                    <li>justify-content</li>
+                    <li>align-items</li>
+                    <li>flex-wrap</li>
+                    <li>gap property</li>
+                </ul>
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+</html>
