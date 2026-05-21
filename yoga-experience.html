@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Yoga Experience</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Zorvixe/zorvixe-ui-kit/dist/zorvixe-ui-kit.css">
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Bree+Serif&family=Caveat:wght@400;700&family=Lobster&family=Monoton&family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Playfair+Display+SC:ital,wght@0,400;0,700;1,700&family=Playfair+Display:ital,wght@0,400;0,700;1,700&family=Roboto:ital,wght@0,400;0,700;1,400;1,700&family=Source+Sans+Pro:ital,wght@0,400;0,700;1,700&family=Work+Sans:ital,wght@0,400;0,700;1,700&display=swap');
+
+    .home-bg-container {
+      background-image: url("https://res.cloudinary.com/djhuqjvrl/image/upload/v1765352861/yoga-bg_m2povf.png");
+      background-size: cover;
+      height: 100vh;
+      text-align: center;
+    }
+
+    .bg-image {
+      height: 50vh;
+      width: 50vw;
+    }
+
+    .home-main-head {
+      color: #132d84;
+      padding: 30px;
+      font-weight: bold;
+      font-family: "Roboto";
+    }
+
+    .home-para {
+      padding: 30px;
+      font-family: "Roboto";
+    }
+
+    .home-btn {
+      background-color: #132d84;
+      color: #fad693;
+      padding: 10px;
+      border-width: 0px;
+      border-radius: 5px;
+    }
+
+    .yoga-bg-container {
+      background-color: #ffedcb;
+      background-size: cover;
+      min-height: 200vh;
+      text-align: center;
+      padding-bottom: 20px;
+    }
+
+    .yoga-girl {
+      height: 40vh;
+      width: 50vw;
+      margin: 20px;
+    }
+
+    .yoga-main-head {
+      color: #132d84;
+      font-family: "Roboto";
+      margin-bottom: 20px;
+    }
+
+    .card-item {
+      background-color: #ffe2ab;
+      margin: 30px;
+      padding: 10px;
+      border-radius: 10px;
+    }
+
+    .card-image {
+      height: 15vh;
+      width: 18vw;
+      margin: 10px;
+    }
+
+    .card-description {
+      padding: 10px;
+      text-align: left;
+    }
+
+    .card-head {
+      color: #323f4b;
+      font-size: 22px;
+    }
+
+    .card-para {
+      color: #7b8794;
+    }
+
+    .back-btn {
+      background-color: #132d84;
+      color: #fad693;
+      padding: 7px;
+      width: 15vh;
+      border-width: 0px;
+      border-radius: 5px;
+    }
+  </style>
+
+</head>
+
+<body>
+
+<div id="section-yoga-home-page" data-default data-section>
+  <div class="home-bg-container">
+
+    <h1 class="home-main-head">
+      Discover the yogi life on the Yoga Experience Platform
+    </h1>
+
+    <img src="https://res.cloudinary.com/djhuqjvrl/image/upload/v1765352931/yoga-girl-with-headphones-img_qp0qsg.png"
+      class="bg-image">
+
+    <p class="home-para">
+      Yoga poses strengthen and open tight areas of the body
+    </p>
+
+    <button class="home-btn"
+      onclick="display('section-yogas')">
+      Get Started
+    </button>
+
+  </div>
+</div>
+
+
+<div id="section-yogas" data-section>
+
+  <div class="yoga-bg-container">
+
+    <img class="yoga-girl"
+      src="https://res.cloudinary.com/djhuqjvrl/image/upload/v1765353011/yoga-girl-without-headphones-img_iyjnac.png"/>
+
+    <h1 class="yoga-main-head">
+      Types of Yoga
+    </h1>
+
+    <div class="card-item d-flex flex-row">
+
+      <img src="https://res.cloudinary.com/djhuqjvrl/image/upload/v1765353060/yoga-card1-img_myhvgv.png"
+      class="card-image"/>
+
+      <div class="card-description">
+        <h2 class="card-head">Acro Yoga</h2>
+        <p class="card-para">
+          It stretches and relaxes your body, improves stamina and memory.
+        </p>
+      </div>
+
+    </div>
+
+
+    <div class="card-item d-flex flex-row">
+
+      <img src="https://res.cloudinary.com/djhuqjvrl/image/upload/v1765353107/yoga-card2-img_ynode5.png"
+      class="card-image"/>
+
+      <div class="card-description">
+        <h2 class="card-head">Vinyasa Yoga</h2>
+        <p class="card-para">
+          It helps build strength and lean muscle mass.
+        </p>
+      </div>
+
+    </div>
+
+
+    <div class="card-item d-flex flex-row">
+
+      <img src="https://res.cloudinary.com/djhuqjvrl/image/upload/v1765353151/yoga-card3-img_osjuh1.png"
+      class="card-image"/>
+
+      <div class="card-description">
+        <h2 class="card-head">Hatha Yoga</h2>
+        <p class="card-para">
+          It introduces beginners to relaxation techniques and asanas.
+        </p>
+      </div>
+
+    </div>
+
+
+    <div class="card-item d-flex flex-row">
+
+      <img src="https://res.cloudinary.com/djhuqjvrl/image/upload/v1765353231/yoga-card4-img_bwhfuq.png"
+      class="card-image"/>
+
+      <div class="card-description">
+        <h2 class="card-head">Kundalini Yoga</h2>
+        <p class="card-para">
+          It improves flexibility, endurance and strength.
+        </p>
+      </div>
+
+    </div>
+
+    <button class="back-btn"
+      onclick="display('section-yoga-home-page')">
+      Back
+    </button>
+
+  </div>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/gh/Zorvixe/zorvixe-ui-kit/dist/zorvixe-ui-kit.js"></script>
+
+</body>
+</html>
