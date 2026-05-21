@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Paris Detailed View</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+    @import url('https://fonts.googleapis.com/css2?family=Bree+Serif&family=Caveat:wght@400;700&family=Lobster&family=Monoton&family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Playfair+Display+SC:ital,wght@0,400;0,700;1,700&family=Playfair+Display:ital,wght@0,400;0,700;1,700&family=Roboto:ital,wght@0,400;0,700;1,400;1,700&family=Source+Sans+Pro:ital,wght@0,400;0,700;1,700&family=Work+Sans:ital,wght@0,400;0,700;1,700&display=swap');
+
+    .detail-view-bg-container {
+      background-image: url("https://images.unsplash.com/photo-1643276714384-93df71d70d43?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+      height: 100vh;
+      background-size: cover;
+      padding: 10px;
+    }
+
+    .detail-view-heading {
+      font-size: 30px;
+      text-align: center;
+      color: white;
+      font-family: "Roboto";
+      text-decoration: underline;
+      padding: 20px;
+    }
+
+    .detail-view-card-container {
+      background-color: white;
+      border-bottom-left-radius: 10px;
+      border-bottom-right-radius: 10px;
+      margin: 15px;
+      overflow: hidden;
+    }
+
+    .detail-view-card-description {
+      padding: 10px;
+    }
+
+    .detail-view-card-heading {
+      font-family: "Roboto";
+      font-weight: bold;
+      color: lightblue;
+    }
+
+    .detail-view-card-para {
+      font-size: 15px;
+      color: #6c672b;
+    }
+
+    .carousel-item img{
+      height:300px;
+      object-fit:cover;
+    }
+
+    </style>
+
+</head>
+
+<body>
+
+<div class="detail-view-bg-container">
+
+    <h1 class="detail-view-heading">
+        Detailed View
+    </h1>
+
+    <div class="detail-view-card-container">
+
+        <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+
+            <div class="carousel-inner">
+
+                <div class="carousel-item active">
+                    <img src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?w=600"
+                    class="d-block w-100">
+                </div>
+
+                <div class="carousel-item">
+                    <img src="https://images.unsplash.com/photo-1431274172761-fca41d930114?w=600"
+                    class="d-block w-100">
+                </div>
+
+                <div class="carousel-item">
+                    <img src="https://images.unsplash.com/photo-1499856871958-5b9627545d1?w=600"
+                    class="d-block w-100">
+                </div>
+
+            </div>
+
+            <button class="carousel-control-prev"
+                type="button"
+                data-bs-target="#carouselExampleControls"
+                data-bs-slide="prev">
+
+                <span class="carousel-control-prev-icon"></span>
+
+            </button>
+
+            <button class="carousel-control-next"
+                type="button"
+                data-bs-target="#carouselExampleControls"
+                data-bs-slide="next">
+
+                <span class="carousel-control-next-icon"></span>
+
+            </button>
+
+        </div>
+
+        <div class="detail-view-card-description">
+
+            <h3 class="detail-view-card-heading">
+                Paris, France
+            </h3>
+
+            <p class="detail-view-card-para">
+                Paris, the capital of France, is celebrated for its rich history, iconic architecture, and artistic heritage. Home to landmarks like the Eiffel Tower, Notre-Dame, and the Louvre, it draws millions of visitors each year. The city’s elegant boulevards, charming cafés, and vibrant neighborhoods give it a timeless allure.
+            </p>
+
+        </div>
+
+    </div>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
