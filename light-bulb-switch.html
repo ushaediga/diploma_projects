@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Light Bulb Switch</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <style>
+        @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
+
+        .dark-background {
+            background-color: #0b0b0b;
+            min-height: 100vh;
+            padding-top: 30px;
+        }
+
+        .bulb-image {
+            width: 150px;
+        }
+
+        .cat-image {
+            width: 300px;
+        }
+
+        .switch-board {
+            background-color: #7b8794;
+            width: 294px;
+            height: 139px;
+            border-radius: 12px;
+            padding: 32px 16px;
+            margin: 16px;
+        }
+
+        .switch-status {
+            color: #ffffff;
+            font-family: "Roboto";
+            font-size: 24px;
+            font-weight: 500;
+            margin-bottom: 24px;
+        }
+
+        .on-switch {
+            color: white;
+            background-color: #22c55e;
+            font-family: "Roboto";
+            font-size: 24px;
+            font-weight: bold;
+            width: 99px;
+            height: 44px;
+            border-radius: 8px;
+            margin-left: 16px;
+            border: none;
+        }
+
+        .off-switch {
+            color: white;
+            background-color: #cbd2d9;
+            font-family: "Roboto";
+            font-size: 24px;
+            font-weight: bold;
+            width: 99px;
+            height: 44px;
+            border-radius: 8px;
+            border: none;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="dark-background text-center">
+        <div>
+            <img src="https://d2clawv67efefq.cloudfront.net/ccbp-dynamic-webapps/bulb-go-on-img.png"
+                class="bulb-image"/>
+        </div>
+
+        <div>
+            <img src="https://d2clawv67efefq.cloudfront.net/ccbp-dynamic-webapps/cat-img.png"
+                class="cat-image"/>
+        </div>
+
+        <div class="d-flex flex-row justify-content-center pt-5">
+            <div class="switch-board">
+
+                <h1 class="switch-status">
+                    Switched On
+                </h1>
+
+                <button class="off-switch">
+                    OFF
+                </button>
+
+                <button class="on-switch">
+                    ON
+                </button>
+
+            </div>
+        </div>
+    </div>
+
+<script>
+
+let bulbImage = document.querySelector(".bulb-image");
+let catImage = document.querySelector(".cat-image");
+let switchStatus = document.querySelector(".switch-status");
+
+let onSwitch = document.querySelector(".on-switch");
+let offSwitch = document.querySelector(".off-switch");
+
+onSwitch.onclick = function () {
+
+    bulbImage.src =
+    "https://d2clawv67efefq.cloudfront.net/ccbp-dynamic-webapps/bulb-go-on-img.png";
+
+    catImage.src =
+    "https://d2clawv67efefq.cloudfront.net/ccbp-dynamic-webapps/cat-img.png";
+
+    switchStatus.textContent = "Switched On";
+
+    onSwitch.style.backgroundColor = "#22c55e";
+    offSwitch.style.backgroundColor = "#cbd2d9";
+};
+
+offSwitch.onclick = function () {
+
+    bulbImage.src =
+    "https://d2clawv67efefq.cloudfront.net/ccbp-dynamic-webapps/bulb-go-off-img.png";
+
+    catImage.src =
+    "https://d2clawv67efefq.cloudfront.net/ccbp-dynamic-webapps/cat-eyes-img.png";
+
+    switchStatus.textContent = "Switched Off";
+
+    offSwitch.style.backgroundColor = "#e12d39";
+    onSwitch.style.backgroundColor = "#cbd2d9";
+};
+
+</script>
+
+</body>
+</html>
