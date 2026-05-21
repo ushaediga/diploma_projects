@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dynamic Heading</title>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@700&family=Roboto:wght@400;700&display=swap');
+
+        .heading {
+            color: #ffffff;
+            background-color: #2563eb;
+            font-style: italic;
+            font-family: "Caveat";
+            font-size: 45px;
+            font-weight: bold;
+            text-decoration: underline;
+            padding: 10px;
+            border-radius: 8px;
+        }
+
+        .default-heading-btn {
+            background: #4f46e5;
+            border-radius: 5px;
+            border: 2px solid #312e81;
+            padding: 8px;
+            font-family: "Roboto";
+            font-size: 15px;
+            color: #ffffff;
+            margin: 10px;
+        }
+
+        .change-heading-btn {
+            background: #22c55e;
+            border-radius: 5px;
+            border: 2px solid #166534;
+            padding: 8px;
+            font-family: "Roboto";
+            font-size: 15px;
+            color: #ffffff;
+            margin: 10px;
+        }
+
+        .remove-styles-btn {
+            background: #ef4444;
+            border-radius: 5px;
+            border: 2px solid #991b1b;
+            padding: 8px;
+            font-family: "Roboto";
+            font-size: 15px;
+            color: #ffffff;
+            margin: 10px;
+        }
+
+        #myContainer {
+            text-align: center;
+            margin-top: 50px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="myContainer"></div>
+
+<script>
+
+let h1Element = document.createElement("h1");
+h1Element.textContent = "Web Technologies";
+
+let containerElement = document.getElementById("myContainer");
+containerElement.appendChild(h1Element);
+
+let btnElement = document.createElement("button");
+btnElement.textContent = "Change Heading";
+btnElement.classList.add("change-heading-btn");
+containerElement.appendChild(btnElement);
+
+btnElement.onclick = function () {
+    h1Element.textContent = "4.0 Technologies";
+    h1Element.classList.add("heading");
+};
+
+let removeStylesBtn = document.createElement("button");
+removeStylesBtn.textContent = "Remove Styles";
+removeStylesBtn.classList.add("remove-styles-btn");
+containerElement.appendChild(removeStylesBtn);
+
+removeStylesBtn.onclick = function() {
+    h1Element.classList.remove("heading");
+};
+
+let defaultHeadingBtn = document.createElement("button");
+defaultHeadingBtn.textContent = "Default Heading";
+defaultHeadingBtn.classList.add("default-heading-btn");
+containerElement.appendChild(defaultHeadingBtn);
+
+defaultHeadingBtn.onclick = function() {
+    h1Element.textContent = "Web Technologies";
+    h1Element.classList.remove("heading");
+};
+
+</script>
+
+</body>
+</html>
