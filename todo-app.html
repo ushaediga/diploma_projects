@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Todo App</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://kit.fontawesome.com/667a36db86.js" crossorigin="anonymous"></script>
+
+    <style>
+        @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
+
+        .checked {
+            text-decoration: line-through;
+        }
+
+        .todos-bg-container {
+            background-color: #f9fbfe;
+            min-height: 100vh;
+            padding-bottom: 30px;
+        }
+
+        .todos-heading {
+            text-align: center;
+            font-family: "Roboto";
+            font-size: 46px;
+            font-weight: 500;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+
+        .create-task-heading,
+        .todo-items-heading {
+            font-family: "Roboto";
+            font-size: 32px;
+            font-weight: 700;
+        }
+
+        .create-task-heading-subpart,
+        .todo-items-heading-subpart {
+            font-weight: 500;
+        }
+
+        .todo-items-container {
+            margin: 0;
+            padding: 0;
+        }
+
+        .todo-item-container {
+            margin-top: 15px;
+            list-style-type: none;
+        }
+
+        .todo-user-input {
+            background-color: white;
+            width: 100%;
+            border: 1px solid #e4e7eb;
+            border-radius: 10px;
+            margin-top: 10px;
+            padding: 15px;
+        }
+
+        .add-todo-button {
+            color: white;
+            background-color: #4c63b6;
+            font-size: 18px;
+            border: none;
+            border-radius: 4px;
+            margin-top: 20px;
+            margin-bottom: 50px;
+            padding: 8px 20px;
+        }
+
+        .label-container {
+            background-color: #e6f6ff;
+            width: 100%;
+            border-left: 5px solid #096f92;
+            border-radius: 4px;
+        }
+
+        .checkbox-input {
+            width: 20px;
+            height: 20px;
+            margin-top: 12px;
+            margin-right: 12px;
+        }
+
+        .checkbox-label {
+            font-size: 16px;
+            width: 82%;
+            margin: 0;
+            padding: 10px 20px;
+        }
+
+        .delete-icon-container {
+            text-align: right;
+            width: 18%;
+        }
+
+        .delete-icon {
+            padding: 15px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="todos-bg-container">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+
+                <h1 class="todos-heading">Todos</h1>
+
+                <h1 class="create-task-heading">
+                    Create
+                    <span class="create-task-heading-subpart">Task</span>
+                </h1>
+
+                <input type="text"
+                    id="todoUserInput"
+                    class="todo-user-input"
+                    placeholder="Enter the task">
+
+                <button class="add-todo-button"
+                    id="addTodoButton">
+                    Add
+                </button>
+
+                <h1 class="todo-items-heading">
+                    My
+                    <span class="todo-items-heading-subpart">Tasks</span>
+                </h1>
+
+                <ul class="todo-items-container"
+                    id="todoItemsContainer">
+                </ul>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+
+let todoitemContainer = document.getElementById("todoItemsContainer");
+let addTodoButton = document.getElementById("addTodoButton");
+
+let todoList = [
+{
+text:"Learn HTML",
+uniqueId:1
+},
+{
+text:"Learn CSS",
+uniqueId:2
+},
+{
+text:"Learn JS",
+uniqueId:3
+}
+];
+
+function onDeleteTodo(todoId){
+let todoElement=document.getElementById(todoId);
+todoitemContainer.removeChild(todoElement);
+}
+
+function onTodoStatusChange(checkboxId,labelId){
+let labelElement=document.getElementById(labelId);
+labelElement.classList.toggle("checked");
+}
+
+function createAndAppendTodo(todo){
+
+let todoId="todo"+todo.uniqueId;
+let checkboxId="checkbox"+todo.uniqueId;
+let labelId="label"+todo.uniqueId;
+
+let todoElement=document.createElement("li");
+todoElement.classList.add(
+"todo-item-container",
+"d-flex",
+"flex-row"
+);
+
+todoElement.id=todoId;
+todoitemContainer.appendChild(todoElement);
+
+let inputElement=document.createElement("input");
+
+inputElement.type="checkbox";
+inputElement.id=checkboxId;
+inputElement.classList.add("checkbox-input");
+
+inputElement.onclick=function(){
+onTodoStatusChange(
+checkboxId,
+labelId
+);
+};
+
+todoElement.appendChild(inputElement);
+
+let labelContainer=document.createElement("div");
+
+labelContainer.classList.add(
+"d-flex",
+"flex-row",
+"label-container"
+);
+
+todoElement.appendChild(labelContainer);
+
+let labelElement=document.createElement("label");
+
+labelElement.setAttribute(
+"for",
+checkboxId
+);
+
+labelElement.id=labelId;
+labelElement.classList.add("checkbox-label");
+labelElement.textContent=todo.text;
+
+labelContainer.appendChild(labelElement);
+
+let deleteIconContainer=document.createElement("div");
+
+deleteIconContainer.classList.add(
+"delete-icon-container"
+);
+
+deleteIconContainer.onclick=function(){
+onDeleteTodo(todoId);
+};
+
+labelContainer.appendChild(deleteIconContainer);
+
+let deleteIcon=document.createElement("i");
+
+deleteIcon.classList.add(
+"fa-solid",
+"fa-trash",
+"delete-icon"
+);
+
+deleteIconContainer.appendChild(deleteIcon);
+
+}
+
+for(let todo of todoList){
+createAndAppendTodo(todo);
+}
+
+let todosCount=todoList.length;
+
+function onAddTodo(){
+
+let userInputElement=
+document.getElementById(
+"todoUserInput"
+);
+
+let userInputValue=
+userInputElement.value;
+
+if(userInputValue===""){
+alert("Enter valid text");
+return;
+}
+
+todosCount=todosCount+1;
+
+let newTodo={
+text:userInputValue,
+uniqueId:todosCount
+};
+
+createAndAppendTodo(newTodo);
+
+userInputElement.value="";
+
+}
+
+addTodoButton.onclick=function(){
+onAddTodo();
+};
+
+</script>
+
+</body>
+</html>
