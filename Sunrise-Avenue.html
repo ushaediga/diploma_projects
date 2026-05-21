@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sunrise Avenue</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Zorvixe/zorvixe-ui-kit/dist/zorvixe-ui-kit.css">
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap');
+
+.home-bg-container {
+    background-image: url("https://res.cloudinary.com/djhuqjvrl/image/upload/v1765386915/assignment-3-home-bg_mwh5bz.png");
+    background-size: cover;
+    height: 100vh;
+}
+
+.home-card-container {
+    background-color: white;
+    text-align: center;
+    padding: 20px;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+}
+
+.home-card-heading {
+    color: #f19116;
+    font-family: "Bree Serif";
+}
+
+.home-card-para {
+    font-family: "Bree Serif";
+}
+
+.home-card-btn-style {
+    background-color: #f19116;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 8px;
+    width: 120px;
+}
+
+.rooms-bg-container {
+    background-color: #222222;
+    min-height: 100vh;
+    padding: 10px;
+}
+
+.rooms-main-head {
+    color: #f19116;
+    font-family: "Bree Serif";
+    margin: 10px;
+}
+
+.rooms-card-item {
+    background-color: white;
+    border-radius: 10px;
+    margin: 10px;
+    cursor: pointer;
+}
+
+.rooms-card-image {
+    height: 160px;
+    width: 120px;
+}
+
+.rooms-card-description {
+    padding: 10px;
+    font-family: "Bree Serif";
+}
+
+.rooms-card-head {
+    color: #040346;
+}
+
+.rooms-card-para {
+    color: #7b8794;
+}
+
+.rooms-back-btn {
+    background-color: #f19116;
+    color: white;
+    border: none;
+    width: 100px;
+    padding: 8px;
+    border-radius: 5px;
+    margin: 10px;
+}
+
+.bhk-top-section {
+    background-image: url("https://res.cloudinary.com/djhuqjvrl/image/upload/v1765386979/flats-list-card1-img_taurll.png");
+    background-size: cover;
+    height: 45vh;
+}
+
+.bhk-bottom-section {
+    background-color: #222222;
+    padding: 15px;
+    font-family: "Bree Serif";
+}
+
+.bhk-rupees-desc {
+    color: #f19116;
+}
+
+.bhk-location-address,
+.bhk-para {
+    color: white;
+}
+
+.bhk-location-icon {
+    height: 20px;
+    margin-right: 10px;
+}
+
+.bhk-btn {
+    background-color: #f19116;
+    color: white;
+    border: none;
+    padding: 8px;
+    width: 120px;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+</style>
+</head>
+
+<body>
+
+<div id="section-home-page" data-default data-section>
+
+<div class="home-bg-container d-flex flex-column justify-content-end">
+
+<div class="home-card-container">
+
+<h1 class="home-card-heading">
+Sunrise Avenue
+</h1>
+
+<p class="home-card-para">
+Move to what moves you.
+</p>
+
+<button class="home-card-btn-style"
+onclick="display('section-rooms-page')">
+Book Flat
+</button>
+
+</div>
+</div>
+</div>
+
+
+<div id="section-rooms-page" data-section>
+
+<div class="rooms-bg-container">
+
+<h1 class="rooms-main-head">
+Sunrise Avenue
+</h1>
+
+<div class="rooms-card-item d-flex flex-row justify-content-start"
+onclick="display('section-3bhk-page')">
+
+<img src="https://res.cloudinary.com/djhuqjvrl/image/upload/v1765386979/flats-list-card1-img_taurll.png"
+class="rooms-card-image">
+
+<div class="rooms-card-description">
+
+<h2 class="rooms-card-head">
+3BHK Flat
+</h2>
+
+<p class="rooms-card-para">
+Fully furnished luxury home with spacious rooms.
+</p>
+
+</div>
+</div>
+
+<div class="rooms-card-item d-flex flex-row justify-content-start"
+onclick="display('section-2bhk-page')">
+
+<img src="https://res.cloudinary.com/dkfyxoeem/image/upload/v1766035217/room2image_jj2otr.png"
+class="rooms-card-image">
+
+<div class="rooms-card-description">
+
+<h2 class="rooms-card-head">
+2BHK Flat
+</h2>
+
+<p class="rooms-card-para">
+Modern minimalist house with stylish furniture.
+</p>
+
+</div>
+</div>
+
+<div class="rooms-card-item d-flex flex-row justify-content-start"
+onclick="display('section-4bhk-page')">
+
+<img src="https://res.cloudinary.com/dkfyxoeem/image/upload/v1766035587/room3image_ns4wua.png"
+class="rooms-card-image">
+
+<div class="rooms-card-description">
+
+<h2 class="rooms-card-head">
+4BHK Flat
+</h2>
+
+<p class="rooms-card-para">
+Elegant contemporary home with more space.
+</p>
+
+</div>
+</div>
+
+<button class="rooms-back-btn"
+onclick="display('section-home-page')">
+Back
+</button>
+
+</div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/gh/Zorvixe/zorvixe-ui-kit/dist/zorvixe-ui-kit.js"></script>
+
+</body>
+</html>
